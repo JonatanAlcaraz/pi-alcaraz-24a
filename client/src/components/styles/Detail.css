@@ -1,0 +1,23 @@
+
+
+.videogame h2{
+    margin-top: 0%;
+    text-align: center;
+    
+}
+
+
+.videogame{
+    padding: 5%;
+    background-color: #25252593;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .detail-content{
+    text-align: center;
+  }
+
+  
+

@@ -1,0 +1,26 @@
+body{
+    color: rgb(255, 255, 255);
+    background-image: url("./components/images/fondo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background: url("../images/fondo.png") center center cover no-repeat fixed; */
+        
+        
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+
+    body {
+        background-image: url("./components/images/fondo-mobile.png"); 
+    }
+}

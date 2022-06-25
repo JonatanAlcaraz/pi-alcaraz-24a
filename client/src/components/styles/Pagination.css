@@ -1,0 +1,40 @@
+.cards {
+    /* margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 20px;
+    font-family: sans-serif;
+    align-items: center;
+    justify-items: center; */
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.pagination-container{
+    margin-top: 2%;
+    margin-bottom: 6%;
+}
+.pagination-btn{
+    margin-top: 5px;
+}
+
+
+.pagination-info{
+    align-items: center;
+    text-align: center;
+    background-color: #1c1c1cae;
+    height: 100%;
+    width: 25%;
+    padding: 1%;
+    padding-left: auto;
+    padding-right: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    
+}

@@ -1,0 +1,47 @@
+.container-form-create{
+    margin-top: 30px;
+    background-color: rgba(39, 38, 38, 0.563);
+    color: white;
+    /* margin-left: 50%;
+    margin-right: 50%; */
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+.title{
+    color: white;
+    text-align: center;
+}
+    .check {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+          }
+.errors{
+    margin-left: 570px;
+    margin-bottom: 30px;
+    background-color: rgb(194, 194, 194);
+    width:max-content ;
+}
+
+.submit{
+    margin-bottom: 30px;
+}
+
+.input{
+    margin-top: 20px;
+}
+textarea{
+    margin-top: 20px;
+    
+}
+label{
+    margin-right:  10px
+}
