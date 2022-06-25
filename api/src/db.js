@@ -12,6 +12,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 //   }
 // );
 
+
 let sequelize =
   process.env.NODE_ENV === "production"
     ? new Sequelize({
