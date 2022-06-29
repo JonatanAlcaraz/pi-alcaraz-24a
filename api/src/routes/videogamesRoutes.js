@@ -71,7 +71,7 @@ router.get("/", async (req, res, next) => {
     // (found);
     res.status(200).send(found);
   }
-  res.status(200).send([...bdGames,...games]);
+  else res.status(200).send([...bdGames,...games]);
 });
 
 router.get("/:id", async function (req, res, next) {
