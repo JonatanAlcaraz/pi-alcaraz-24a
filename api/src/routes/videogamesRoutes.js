@@ -48,7 +48,6 @@ function idGenerator() {
 let idfunc = idGenerator()
 
 router.get("/", async (req, res, next) => {
-  console.log(process.env);
   const { name } = req.query;
   let games = await Promise.all([
     axios.get(`${API_URL}?key=${API_KEY}`),

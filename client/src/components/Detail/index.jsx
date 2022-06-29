@@ -21,8 +21,6 @@ function Detail() {
   const platforms = useSelector((state) => state.platforms);
   const loading = useSelector((state) => state.loading);
   const statew = useSelector((state) => state);
-  console.log(genres);
-  console.log(statew);
   const dispatch = useDispatch();
 
   function platformsFilter(platforms, gamePlat) {
@@ -38,7 +36,6 @@ function Detail() {
     return arr;
   }
 
-  console.log(gameDetail, "gamed");
 
   function genreFilter(gameGenres) {
     let arr = [];
@@ -53,7 +50,6 @@ function Detail() {
   useEffect(() => {
   
     window.scrollTo(0, 0)
-      console.log("el juego es ", gameDetail.name ,", busco");
       dispatch(setLoading(true))
       dispatch(getVidegoameDetail(id));
       dispatch(getPlatforms());
@@ -64,8 +60,6 @@ function Detail() {
     };
   }, [dispatch, id]);
   
-  console.log("gameDetail.name",gameDetail.name);
-  console.log("loading", loading);
   return (
     <div>
       <NavBar />

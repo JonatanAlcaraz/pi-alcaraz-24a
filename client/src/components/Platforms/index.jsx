@@ -4,7 +4,6 @@ import { getPlatforms } from "../../redux/actions";
 
 function Platforms(){
     const platforms = useSelector((state) => state.platforms);
-    console.log(platforms);
     const dispatch = useDispatch()
     useEffect(()=>{
         if(platforms && platforms.length === 0) dispatch(getPlatforms())

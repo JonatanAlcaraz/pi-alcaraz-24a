@@ -1,7 +1,6 @@
 import { GET_GENRES, GET_VIDEOGAMES, GET_VIDEOGAME_DETAIL, GET_PLATFORMS, SEARCH_VIDEOGAMES, UPDATE_PAGE, RESET_DETAIL, SORT_API, SORT_CREATED, SORT_GENRE, SET_SORT, RESET_SORT_SEARCH, SET_LOADING } from "./actionsTypes";
 import axios from 'axios'
 const env = process.env
-console.log(env,"env");
 export function getVidegoames(){
     return async (dispatch) => {
         return await axios.get(`${env.REACT_APP_URL}videogames`)

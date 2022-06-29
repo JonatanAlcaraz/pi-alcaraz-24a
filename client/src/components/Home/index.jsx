@@ -42,7 +42,6 @@ function Home() {
     //if (platforms.length === 0) dispatch(getPlatforms());
     dispatch(getGenres());
   }, [dispatch]);
-  console.log(loading);
   return (
     <div class="primary-container">
       <div>
