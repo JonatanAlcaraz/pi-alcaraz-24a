@@ -4,7 +4,7 @@ const env = process.env
 console.log(env,"env");
 export function getVidegoames(){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}videogames`)
+        return await axios.get(`${env.REACT_APP_URL}videogames`)
         //.then(r =>  (r))
         .then(r => dispatch({ type: GET_VIDEOGAMES, payload: r.data }))
         .catch(e =>  ("error en peticion al backend"))
@@ -12,7 +12,7 @@ export function getVidegoames(){
 }
 export function getVidegoamesApi(){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}videogames/get/onlyapi`)
+        return await axios.get(`${env.REACT_APP_URL}videogames/get/onlyapi`)
         //.then(r =>  (r))
         .then(r => dispatch({ type: SORT_API, payload: r.data }))
         .catch(e =>  ("error en peticion al backend"))
@@ -22,7 +22,7 @@ export function getVidegoamesApi(){
 
 export function getVidegoameDetail(id){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}videogames/${id}`)
+        return await axios.get(`${env.REACT_APP_URL}videogames/${id}`)
         //.then(r =>  (r))
         .then(r => dispatch({ type: GET_VIDEOGAME_DETAIL, payload: r.data }))
         .catch(e =>  ("error en peticion al backend"))
@@ -30,7 +30,7 @@ export function getVidegoameDetail(id){
 }
 export function getVidegoameByName(name){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}videogames?name=${name}`)
+        return await axios.get(`${env.REACT_APP_URL}videogames?name=${name}`)
         //.then(r =>  (r))
         .then(r => dispatch({ type: SEARCH_VIDEOGAMES, payload: r.data }))
         .catch(e =>  ("error en peticion al backend"))
@@ -40,14 +40,14 @@ export function getVidegoameByName(name){
 
 export function getGenres(){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}genres`)
+        return await axios.get(`${env.REACT_APP_URL}genres`)
         .then(r => dispatch({ type: GET_GENRES, payload: r.data }))
     }
 }
 
 export function getPlatforms(){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}videogames/get/platforms`)
+        return await axios.get(`${env.REACT_APP_URL}videogames/get/platforms`)
         .then(r => dispatch({ type: GET_PLATFORMS, payload: r.data }))
     }
 }
@@ -80,7 +80,7 @@ export function filterByGenre(genre){
 
 export function sortByCreate(){
     return async (dispatch) => {
-        return await axios.get(` ${env.REACT_APP_URL}videogames/get/created`)
+        return await axios.get(`${env.REACT_APP_URL}videogames/get/created`)
         .then(r => dispatch({ type: SORT_CREATED, payload: r.data }))
     }
 }
