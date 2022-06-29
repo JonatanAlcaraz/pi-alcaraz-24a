@@ -1,13 +1,24 @@
-/* h3{
+ .landing-container{
     color: white;
 }
 
 .landing{
-    margin-top: 200px;
-    background-color: rgb(104, 104, 104);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: #1c1c1cae;
 }
-
-button{
+.landing-data{
+    text-align: center;
+}
+.landing-img{
+    text-align: center;
+}
+.btn-container{
+    text-align: center;
+}
+.start-btn{
     background-color: white;
     margin-bottom: 30px;
-} */
+} 

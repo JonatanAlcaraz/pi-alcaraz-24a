@@ -21,9 +21,6 @@ function PaginationContainer({ games, setLoading }) {
     setGamesPage([...games].splice(initialIndex, 15));
     setCurrentPage(nextPage);
     dispatch(updatePage(nextPage));
-    setTimeout(()=>{
-      setLoading(false)
-    },1000)
   }
 
   function prevPageHandler() {
@@ -35,15 +32,16 @@ function PaginationContainer({ games, setLoading }) {
     setGamesPage([...games].splice(initialIndex, 15));
     dispatch(updatePage(prevPage));
     setCurrentPage(prevPage);
-    setTimeout(()=>{
-      setLoading(false)
-    },1000)
+    
   }
 
   useEffect(() => {
     //if(lastPage && lastPage > 0) setCurrentPage(lastPage)
     if (games) setGamesPage([...games].splice(lastPage * 15, 15));
     //dispatch(updatePage(currentPage))
+    setTimeout(()=>{
+      setLoading(false)
+    },1000)
   }, [games, currentPage, lastPage]);
 
   return (

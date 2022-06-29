@@ -52,9 +52,9 @@ function Sort({setLoading}) {
     
     dispatch(updatePage(0));
     dispatch(setLastSort(e.target.value))
-    setTimeout(()=>{
-      setLoading(false)
-    },2000)
+    // setTimeout(()=>{
+    //   setLoading(false)
+    // },2000)
   }
 
   return (
