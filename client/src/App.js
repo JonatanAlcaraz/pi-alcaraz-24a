@@ -16,7 +16,6 @@ function App() {
         <Route path='/home' exact component={Home}/>
         <Route path='/detail/:id' exact component={Detail}/>
         <Route path='/create' exact component={CreateGame}/>
-        
       </Switch>
     </div>
   );
