@@ -16,7 +16,7 @@ function Home() {
   const platforms = useSelector((state) => state.platforms);
   //const platforms = useSelector((state) => state.platforms);
   const genres = useSelector((state) => state.genres);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   function gameChoice(games, searchedGames, sortedGames) {
     // ("render games",(sortedGames.length === 0 && searchedGames.length === 0),"render search",searchedGames.length,"render sorted",sortedGames.length);
@@ -24,18 +24,22 @@ function Home() {
       sortedGames.length === 0 &&
       searchedGames.length === 0 &&
       currentSort === GET_VIDEOGAMES
-    )
+    ) {
       return games;
+    }
     if (searchedGames.length && currentSort === SEARCH) return searchedGames;
     if (
       sortedGames.length &&
       currentSort !== SEARCH &&
       currentSort !== GET_VIDEOGAMES
-    )
+    ) {
+      console.log(sortedGames);
       return sortedGames;
+    }
   }
   useEffect(() => {
-    window.scrollTo(0, 0)
+    console.log();
+    window.scrollTo(0, 0);
     if (games.length === 0) {
       dispatch(getVidegoames());
     }
@@ -47,16 +51,16 @@ function Home() {
       <div>
         <NavBar endPoint={"home"} />
       </div>
-      { games.length && !loading ? (
+      {/* {games.length && !loading ? ( */}
         <div>
           <PaginationContainer
             games={gameChoice(games, searchedGames, sortedGames)}
             setLoading={setLoading}
           />
         </div>
-      ) : (
-        <Loading/>
-      )}
+      {/* ) : (
+        <Loading />
+      )} */}
       <Footer />
     </div>
   );
