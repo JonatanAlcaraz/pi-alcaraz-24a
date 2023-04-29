@@ -12,7 +12,7 @@ function PaginationContainer({ games, setLoading }) {
   const dispatch = useDispatch();
 
   function nextPageHandler() {
-    let gamesCount = games.length;
+    let gamesCount = games?.length;
     const nextPage = lastPage + 1;
     const initialIndex = nextPage * 15;
     if (initialIndex >= gamesCount) return;
