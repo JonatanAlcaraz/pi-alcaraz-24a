@@ -50,12 +50,18 @@ function PaginationContainer({ games, setLoading }) {
         <div class="pagination-info">
         <Sort  setLoading={setLoading}/>
           <div class="pagination-text">Page {lastPage + 1}</div>
+          {games?.length ? 
           <div class="pagination-btn"> 
             <button onClick={prevPageHandler}>{"<< Prev Page"}</button>
             <button onClick={nextPageHandler}>{"Next Page >>"}</button>
           </div>
+        :
+        null
+        }
         </div>
       </div>
+      {games?.length ? 
+
       <div className="cards">
         {gamesPage &&
           gamesPage.map((game) => {
@@ -65,10 +71,13 @@ function PaginationContainer({ games, setLoading }) {
                 image={game.background_image}
                 id={game.id}
                 genres={game.genres}
-              />
-            );
-          })}
+                />
+                );
+              })}
       </div>
+      :
+      null
+      }
     </div>
   );
 }

@@ -16,7 +16,7 @@ function Home() {
   const platforms = useSelector((state) => state.platforms);
   //const platforms = useSelector((state) => state.platforms);
   const genres = useSelector((state) => state.genres);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   function gameChoice(games, searchedGames, sortedGames) {
     // ("render games",(sortedGames.length === 0 && searchedGames.length === 0),"render search",searchedGames.length,"render sorted",sortedGames.length);
@@ -43,6 +43,8 @@ function Home() {
     if (games.length === 0) {
       dispatch(getVidegoames());
     }
+
+    setLoading(false)
     //if (platforms.length === 0) dispatch(getPlatforms());
     dispatch(getGenres());
   }, [dispatch]);
@@ -51,37 +53,19 @@ function Home() {
       <div>
         <NavBar endPoint={"home"} />
       </div>
-      {/* {games.length && !loading ? ( */}
+      { games?.length ? (
         <div>
           <PaginationContainer
             games={gameChoice(games, searchedGames, sortedGames)}
             setLoading={setLoading}
           />
         </div>
-      {/* ) : (
+       ) : (
         <Loading />
-      )} */}
+      )} 
       <Footer />
     </div>
   );
 }
 
 export default Home;
-
-// {(sortedGames.length === 0 && searchedGames.length === 0) &&
-//     <div>
-//         <PaginationContainer games={games} />
-//     </div>
-//   }
-
-//   {searchedGames.length &&
-//   <div>
-//       <PaginationContainer games={searchedGames} />
-//   </div>
-// }
-
-//   {sortedGames.length &&
-//     <div>
-//         <PaginationContainer games={sortedGames} />
-//     </div>
-//         }

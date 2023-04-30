@@ -6,7 +6,6 @@ import "../styles/Cards.css";
 function Cards({ name, image, id, genres }) {
   const [timestamp, setTimestamp] = useState(Date.now());
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-  console.log(isImageLoaded);
   function genreFilter(gameGenres) {
     let arr = [];
     if (typeof gameGenres[0] !== "string") {

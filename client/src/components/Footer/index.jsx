@@ -4,7 +4,6 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div>
       <div className="footer">
         <div className="hecho">
           <h4>Hecho por Jonatan Alcaraz para Henry con</h4>{" "}
@@ -20,7 +19,6 @@ function Footer() {
           </svg>
         </div>
       </div>
-    </div>
   );
 }
 
